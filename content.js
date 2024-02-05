@@ -23,9 +23,11 @@ function updateAdjustedTime() {
 }
 
 function formatTime(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const remainingSeconds = Math.round(seconds % 60);
-  return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    const remainingSeconds = Math.round(seconds%60)
+    const minutes = Math.floor(seconds/60)
+    const remainingMinutes = Math.round(minutes%60)
+    const hours = Math.floor(seconds/3600)
+    return `${hours}:${remainingMinutes < 10? '0':''}${remainingMinutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`
 }
 
 // Listen for changes in the video's playback rate
