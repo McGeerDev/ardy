@@ -6,3 +6,10 @@ Find it annoying how you change the rate of the video's playback speed but the
 duration stays the same? Well look no further.
 
 This only works on youtube.. for now.
+
+
+#### Zip the contents and exclude git files
+
+```
+zip -r ardy.zip ardy -x '*.git*'
+```
